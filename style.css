@@ -1,0 +1,522 @@
+/* =========================================
+   RESET
+   ========================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   TŁO STRONY
+   ========================================= */
+
+body {
+
+    margin: 0;
+
+    min-height: 100vh;
+
+    padding: 22px 15px;
+
+    background: linear-gradient(to top, navy, purple);
+    background-repeat: no-repeat;
+    
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+}
+
+
+/* =========================================
+   PIONOWE NAPISY PO BOKACH
+   ========================================= */
+
+.napis-lewy,
+.napis-prawy {
+
+    position: fixed;
+
+    top: 0;
+
+    height: 100vh;
+
+    width: 35px;
+
+    background: rgba(0, 0, 0, 0.6);
+
+    color: white;
+
+    writing-mode: vertical-rl;
+
+    text-orientation: mixed;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-size: 20px;
+
+    font-weight: bold;
+
+    letter-spacing: 4px;
+
+    user-select: none;
+
+    z-index: 10;
+}
+
+
+.napis-lewy {
+
+    left: 0;
+}
+
+
+.napis-prawy {
+
+    right: 0;
+
+    transform: rotate(180deg);
+}
+
+
+/* =========================================
+   GŁÓWNY UKŁAD
+   ========================================= */
+
+.page-wrapper {
+
+    width: 100%;
+
+    position: relative;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: flex-start;
+}
+
+
+/* =========================================
+   BOCZNE ZDJĘCIA
+   ========================================= */
+
+.outside-photo {
+
+    position: absolute;
+
+    width: 150px;
+
+    height: 190px;
+
+    overflow: hidden;
+
+    border-radius: 4px;
+
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, 0.20);
+
+    z-index: 2;
+}
+
+
+.outside-photo img {
+
+    width: 100%;
+
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+}
+
+
+/* =========================================
+   LEWA STRONA
+   ========================================= */
+
+/*
+   Zmieniaj tutaj wartości "left",
+   jeżeli chcesz przesunąć zdjęcia
+   bliżej albo dalej od głównej ramki.
+*/
+
+.left-photo {
+
+    left: calc(50% - 545px);
+}
+
+
+/* GÓRNE LEWE */
+
+.top-left {
+
+    top: 20px;
+}
+
+
+/* ŚRODKOWE LEWE */
+
+.middle-left {
+
+    top: 219px;
+}
+
+
+/* DOLNE LEWE */
+
+.bottom-left {
+
+    top: 418px;
+}
+
+
+/* =========================================
+   PRAWA STRONA
+   ========================================= */
+
+/*
+   Zmieniaj tutaj wartości "right",
+   jeżeli chcesz przesunąć zdjęcia
+   bliżej albo dalej od głównej ramki.
+*/
+
+.right-photo {
+
+    right: calc(50% - 545px);
+}
+
+
+/* GÓRNE PRAWE */
+
+.top-right {
+
+    top: 20px;
+}
+
+
+/* ŚRODKOWE PRAWE */
+
+.middle-right {
+
+    top: 219px;
+}
+
+
+/* DOLNE PRAWE */
+
+.bottom-right {
+
+    top: 418px;
+}
+
+
+/* =========================================
+   GŁÓWNA RAMKA TŁO
+   ========================================= */
+
+.profile {
+
+    width: 390px;
+
+    min-height: 850px;
+
+    padding: 18px;
+
+    background: #000000fa;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.20);
+
+    position: relative;
+
+    z-index: 1;
+}
+
+
+/* =========================================
+   PROFIL
+   ========================================= */
+
+.profile-header {
+
+    text-align: center;
+
+    padding: 50px 5px 20px;
+
+    color: rgb(255, 255, 255);
+}
+
+
+.avatar {
+
+    width: 66px;
+
+    height: 66px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    display: block;
+
+    margin: 0 auto 9px;
+
+    border: 2px solid white;
+
+    box-shadow:
+        0 2px 7px rgba(0, 0, 0, 0.15);
+}
+
+
+.profile-header h1 {
+
+    margin: 0 0 3px;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 18px;
+
+    font-weight: 600;
+
+    color: #ff00ff;
+}
+
+
+.description {
+
+    margin: 0;
+
+    font-size: 12px;
+
+    line-height: 1.35;
+
+    color: #ffffff;
+}
+
+
+/* =========================================
+   GŁÓWNY BANER
+   ========================================= */
+
+.banner {
+
+    width: 100%;
+
+    height: 190px;
+
+    overflow: hidden;
+
+    background: #777d51;
+
+    margin-bottom: 9px;
+}
+
+
+.banner img {
+
+    width: 100%;
+
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+}
+
+
+/* =========================================
+   LINKI
+   ========================================= */
+
+.links {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 9px;
+}
+
+
+.link-card {
+
+    position: relative;
+
+    width: 100%;
+
+    height: 44px;
+
+    display: flex;
+
+    align-items: center;
+
+    background: #660069;
+
+    color: white;
+
+    text-decoration: none;
+
+    box-shadow:
+        0 4px 8px rgba(0, 0, 0, 0.08);
+
+    transition:
+        background 0.15s ease,
+        transform 0.15s ease;
+}
+
+
+.link-card img {
+
+    width: 44px;
+
+    height: 44px;
+
+    flex-shrink: 0;
+
+    display: block;
+
+    object-fit: cover;
+}
+
+
+.link-card span {
+
+    flex: 1;
+
+    padding: 0 10px;
+
+    text-align: center;
+
+    font-size: 12px;
+
+    font-weight: bold;
+}
+
+
+.link-card b {
+
+    width: 25px;
+
+    flex-shrink: 0;
+
+    text-align: center;
+
+    font-size: 14px;
+
+    font-weight: normal;
+
+    color: #eeeeee;
+}
+
+
+.link-card:hover {
+
+    background: #686e45;
+
+    transform: translateY(-2px);
+}
+
+
+.link-card:active {
+
+    transform: translateY(0);
+}
+
+
+/* =========================================
+   TELEFON
+   ========================================= */
+
+@media (max-width: 850px) {
+
+    /*
+       Na telefonie boczne zdjęcia
+       oraz pionowe paski znikają.
+    */
+
+    .outside-photo {
+
+        display: none;
+    }
+
+
+    .page-wrapper {
+
+        display: flex;
+
+        justify-content: center;
+    }
+
+
+    .profile {
+
+        width: 390px;
+
+        max-width: 100%;
+    }
+}
+
+
+/* =========================================
+   BARDZO MAŁY TELEFON
+   ========================================= */
+
+@media (max-width: 420px) {
+
+    body {
+
+        padding: 10px 0;
+    }
+
+
+    .profile {
+
+        width: calc(100% - 14px);
+
+        padding: 14px;
+
+        border-radius: 12px;
+    }
+
+
+    .profile-header {
+
+        padding-top: 30px;
+    }
+
+
+    .banner {
+
+        height: 160px;
+    }
+
+
+    .link-card {
+
+        height: 46px;
+    }
+
+
+    .link-card img {
+
+        width: 46px;
+
+        height: 46px;
+    }
+
+
+    .link-card span {
+
+        font-size: 11px;
+    }
+
+}
